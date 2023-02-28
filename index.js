@@ -42,7 +42,7 @@ alert('El total de tu compra es: $' + total);
 const envio = () => {
     if (total >= 2500) {
         alert('EL envío a domicilio es sin cargo! 🛵')
-    }else {
+    } else {
         total += 1000
         alert('El costo del envío es de $1000, total: $' + total)
     }
@@ -57,13 +57,15 @@ envio(); //LAMADO A LA FUNCIÓN ENVÍO
 
 const metodoDePago = () => {
     let metodo = prompt('Ingrese la forma de pago, con tarjeta 10% de recargo o en efectivo 5% de descuento')
-    if ( metodo === 'tarjeta'){
+    if (metodo === 'tarjeta') {
         total *= 1.1
-        alert('El costo tiene un interés del 10%, el total es: $' +total) 
-    }else if(metodo === 'efectivo') {
+         alert('El costo tiene un interés del 10%, el total es: $' + Math.floor (total))
+    } else if (metodo === 'efectivo') {
         total /= 1.05
-        alert('El costo tiene un descuento del 5%, el total es: $' +total)
+         alert('El costo tiene un descuento del 5%, el total es: $' + Math.floor (total))
     }
+
+
 }
 
 metodoDePago();//LLAMADO A FUNCIÓN METODO DE PAGO
